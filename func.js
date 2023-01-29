@@ -6,8 +6,11 @@ function add(a, b) {
 function print(yourname) {
     console.log("hey ".concat(yourname), "i don't return anything");
 }
+//can't re-open a 'type'
 var userOne = {
     name: 'ritz',
+    role: "hr",
+    birthDate: "30/08/2022",
     email: "ritz@gmail.com",
     userId: 234,
     startTrail: function () {

@@ -18,11 +18,8 @@ let userArr:User[] = [
 
 let mixArr:(number | string)[] = [2,"str",34,"vtr"];
 
-interface Admin{
-    name:string
-    email:string
-    phone:number
-    role:string
+type Admin = User & {
+    role: "admin" | "hr" | "devloper"
     readonly _id?:string
 }
 let userTwo:(Admin | User) = {

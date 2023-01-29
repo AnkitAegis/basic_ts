@@ -12,9 +12,17 @@ interface User {
     startTrail():string
     getCoupon(coupon:string):number
 }
-
-let userOne:User = {
+interface User{
+    birthDate:string
+}
+interface Admin extends User{
+    role: "admin" | "hr" | "devloper"
+}
+//can't re-open a 'type'
+let userOne:Admin = {
     name:'ritz',
+    role:"hr",
+    birthDate:"30/08/2022",
     email:"ritz@gmail.com",
     userId:234,
     startTrail:()=>{
